@@ -1,0 +1,50 @@
+name: Bug report
+description: Report a reproducible gameplay, interface, or probability-system defect.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thank you for helping improve ECHO. Do not include credentials or security-sensitive details here.
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened, and what did you expect instead?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Include route, seed, difficulty, actions, and browser where possible.
+      placeholder: |
+        Seed: ECHO-...
+        Difficulty: Signal
+        Steps:
+        1. ...
+    validations:
+      required: true
+  - type: input
+    id: revision
+    attributes:
+      label: Revision
+      description: Commit SHA or branch, if known.
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Area
+      options:
+        - Simulation / probability
+        - Play HUD / rendering
+        - Probability Lab
+        - Debrief / replay
+        - Internationalization / accessibility
+        - Build / documentation
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Supporting evidence
+      description: Add console output, screenshots, or a minimal test case. Drag files here rather than pasting large encoded data.

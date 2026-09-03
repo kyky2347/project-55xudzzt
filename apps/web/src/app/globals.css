@@ -1,0 +1,102 @@
+@import "@fontsource/oxanium/400.css";
+@import "@fontsource/oxanium/500.css";
+@import "@fontsource-variable/manrope";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 195 18% 3%;
+    --foreground: 175 18% 88%;
+    --card: 188 17% 6%;
+    --card-foreground: 175 18% 88%;
+    --primary: 171 63% 62%;
+    --primary-foreground: 193 24% 4%;
+    --secondary: 184 13% 10%;
+    --secondary-foreground: 175 14% 82%;
+    --muted: 186 12% 9%;
+    --muted-foreground: 178 9% 59%;
+    --accent: 147 42% 56%;
+    --accent-foreground: 193 24% 4%;
+    --destructive: 6 71% 62%;
+    --border: 177 15% 20%;
+    --input: 177 15% 20%;
+    --ring: 171 63% 62%;
+    --font-display: "Oxanium";
+    --font-body: "Manrope Variable";
+    --font-mono: "IBM Plex Mono";
+  }
+
+  * { @apply border-border; }
+
+  html { background: hsl(var(--background)); scroll-behavior: smooth; }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    min-height: 100vh;
+    background-image:
+      linear-gradient(rgba(121, 221, 203, 0.022) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(121, 221, 203, 0.018) 1px, transparent 1px),
+      radial-gradient(circle at 50% 40%, rgba(67, 130, 121, 0.07), transparent 42%);
+    background-size: 48px 48px, 48px 48px, auto;
+  }
+
+  ::selection { background: rgba(121, 221, 203, 0.25); color: #ecfffa; }
+  :focus-visible { outline: 1px solid #79ddcb; outline-offset: 4px; }
+
+  .skip-link {
+    @apply fixed left-4 top-3 z-[100] -translate-y-20 border border-primary bg-background px-4 py-2 font-mono text-[10px] uppercase tracking-[0.14em] text-primary transition-transform;
+  }
+  .skip-link:focus { transform: translateY(0); }
+
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-track { background: #050809; }
+  ::-webkit-scrollbar-thumb { background: #24413d; border: 2px solid #050809; }
+  ::-webkit-scrollbar-thumb:hover { background: #46766e; }
+}
+
+@layer components {
+  .survey-label { @apply font-mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground; }
+  .survey-value { @apply font-mono text-sm tabular-nums tracking-[-0.02em] text-foreground; }
+  .instrument-panel {
+    background: linear-gradient(145deg, rgba(13, 22, 23, 0.88), rgba(6, 11, 12, 0.93));
+    border: 1px solid rgba(109, 160, 150, 0.23);
+    box-shadow: 0 18px 52px rgba(0, 0, 0, 0.36);
+  }
+  .hairline { height: 1px; background: linear-gradient(90deg, transparent, rgba(121, 221, 203, 0.28), transparent); }
+  .echo-noise::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.027;
+    z-index: 50;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.94' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E");
+  }
+  .corner-marks {
+    background:
+      linear-gradient(to right, #79ddcb 1px, transparent 1px) 0 0 / 16px 1px no-repeat,
+      linear-gradient(to bottom, #79ddcb 1px, transparent 1px) 0 0 / 1px 16px no-repeat,
+      linear-gradient(to left, #79ddcb 1px, transparent 1px) 100% 100% / 16px 1px no-repeat,
+      linear-gradient(to top, #79ddcb 1px, transparent 1px) 100% 100% / 1px 16px no-repeat;
+  }
+}
+
+.high-contrast {
+  --foreground: 165 20% 98%;
+  --muted-foreground: 173 12% 75%;
+  --border: 171 35% 36%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

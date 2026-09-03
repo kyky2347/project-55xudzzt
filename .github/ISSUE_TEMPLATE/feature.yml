@@ -1,0 +1,31 @@
+name: Feature proposal
+description: Propose a focused improvement consistent with ECHO's probabilistic design.
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Player or engineering problem
+      description: Describe the need before describing a solution.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed direction
+      description: Explain the intended behavior and why it belongs in ECHO.
+    validations:
+      required: true
+  - type: textarea
+    id: probability
+    attributes:
+      label: Probability and hidden-state impact
+      description: Could this expose truth, change seeded behavior, or alter a displayed metric?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: List observable, testable outcomes for English, Chinese, desktop, and mobile where applicable.

@@ -1,0 +1,23 @@
+{
+  "name": "echo-blind-cartographer",
+  "private": true,
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@11.19.0",
+  "scripts": {
+    "dev": "pnpm --filter @echo/web dev",
+    "start:all": "pnpm install && pnpm dev",
+    "build": "pnpm --filter @echo/inference-core build && pnpm --filter @echo/web build",
+    "lint": "pnpm --filter @echo/web lint",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm --filter @echo/inference-core test && pnpm --filter @echo/web test",
+    "test:e2e": "pnpm --filter @echo/web test:e2e",
+    "benchmark": "pnpm --filter @echo/inference-core benchmark",
+    "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm build"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  }
+}
