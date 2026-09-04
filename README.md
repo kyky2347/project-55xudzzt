@@ -6,7 +6,7 @@
 
 A bilingual probabilistic exploration game in which the map is hidden, movement is uncertain, and every useful observation helps a Bayesian Hunter find you.
 
-[![CI](https://github.com/kyky2347/project-55xudzzt/actions/workflows/ci.yml/badge.svg)](https://github.com/kyky2347/project-55xudzzt/actions/workflows/ci.yml)
+[![CI](https://github.com/kyky2347/echo-blind-cartographer/actions/workflows/ci.yml/badge.svg)](https://github.com/kyky2347/echo-blind-cartographer/actions/workflows/ci.yml)
 [![Node.js 20+](https://img.shields.io/badge/Node.js-20%2B-6DA55F?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![Next.js 15](https://img.shields.io/badge/Next.js-15-111111?logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -74,8 +74,8 @@ Requirements:
 Clone and run:
 
 ```bash
-git clone https://github.com/kyky2347/project-55xudzzt.git
-cd project-55xudzzt
+git clone https://github.com/kyky2347/echo-blind-cartographer.git
+cd echo-blind-cartographer
 pnpm install --frozen-lockfile
 pnpm dev
 ```
@@ -85,7 +85,7 @@ Open [http://localhost:3000](http://localhost:3000).
 One-line launch after cloning:
 
 ```bash
-cd project-55xudzzt && pnpm start:all
+cd echo-blind-cartographer && pnpm start:all
 ```
 
 Production build:
@@ -128,7 +128,7 @@ flowchart LR
 `packages/inference-core` is framework-independent and owns simulation truth. `apps/web` receives projections and observations, then renders them with PixiJS and semantic HTML. PixiJS never owns gameplay state, and normal Play components never receive `TrueWorldState`.
 
 ```text
-project-55xudzzt/
+echo-blind-cartographer/
 ├── apps/web/                 Next.js application, HUD, routes, i18n and browser tests
 ├── packages/inference-core/  Seeded simulation, probability, sensors and Hunter AI
 ├── docs/math/                Derivations and implementation notes
@@ -207,8 +207,8 @@ ECHO 是一款双语概率探索游戏。玩家无法看到真实地图或真实
 快速启动：
 
 ```bash
-git clone https://github.com/kyky2347/project-55xudzzt.git
-cd project-55xudzzt
+git clone https://github.com/kyky2347/echo-blind-cartographer.git
+cd echo-blind-cartographer
 pnpm install --frozen-lockfile
 pnpm dev
 ```

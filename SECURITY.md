@@ -6,7 +6,7 @@ The latest commit on `main` is the supported version of ECHO.
 
 ## Reporting a vulnerability
 
-Please do not publish exploitable details in a public issue. Use GitHub’s [private vulnerability reporting flow](https://github.com/kyky2347/project-55xudzzt/security/advisories/new) and include:
+Please do not publish exploitable details in a public issue. Use GitHub’s [private vulnerability reporting flow](https://github.com/kyky2347/echo-blind-cartographer/security/advisories/new) and include:
 
 - A concise description of the problem and its impact.
 - Reproduction steps or a minimal proof of concept.

@@ -5,8 +5,8 @@ Thank you for improving ECHO. Contributions should preserve the project’s cent
 ## Development setup
 
 ```bash
-git clone https://github.com/kyky2347/project-55xudzzt.git
-cd project-55xudzzt
+git clone https://github.com/kyky2347/echo-blind-cartographer.git
+cd echo-blind-cartographer
 pnpm install --frozen-lockfile
 pnpm dev
 ```
